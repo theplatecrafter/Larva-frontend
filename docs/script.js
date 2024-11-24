@@ -13,7 +13,7 @@ document.getElementById('sliceForm').addEventListener('submit', async (e) => {
   formData.append('pointY', document.getElementById('pointY').value);
   formData.append('pointZ', document.getElementById('pointZ').value);
 
-  const response = await fetch('http://localhost:8000/slice-stl', {
+  const response = await fetch('http://localhost:5000/slice-stl', {
       method: 'POST',
       body: formData
   });
