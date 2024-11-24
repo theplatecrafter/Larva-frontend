@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Larva Frontend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STL Slicer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Larva Frontend</h1>
-    <form id="calcForm" onsubmit="return false;">
-        <label for="userInput">Enter Data:</label>
-        <input type="text" id="userInput" name="userInput" required>
-        <button type="button" id="submitBtn">Submit</button>
+    <h1>STL File Slicer</h1>
+    <form id="sliceForm">
+        <label for="stlFile">STL File:</label>
+        <input type="file" id="stlFile" name="stlFile" accept=".stl" required>
+        <br>
+        <label for="normalX">Slicing Plane Normal X:</label>
+        <input type="number" id="normalX" name="normalX" step="any" required>
+        <br>
+        <label for="normalY">Slicing Plane Normal Y:</label>
+        <input type="number" id="normalY" name="normalY" step="any" required>
+        <br>
+        <label for="normalZ">Slicing Plane Normal Z:</label>
+        <input type="number" id="normalZ" name="normalZ" step="any" required>
+        <br>
+        <label for="pointX">Slicing Plane Point X:</label>
+        <input type="number" id="pointX" name="pointX" step="any" required>
+        <br>
+        <label for="pointY">Slicing Plane Point Y:</label>
+        <input type="number" id="pointY" name="pointY" step="any" required>
+        <br>
+        <label for="pointZ">Slicing Plane Point Z:</label>
+        <input type="number" id="pointZ" name="pointZ" step="any" required>
+        <br>
+        <button type="submit">Slice STL</button>
     </form>
-    <div id="result"></div>
-    <script src="script.js"></script>
+    <div id="output"></div>
+    <script src="app.js"></script>
 </body>
 </html>
